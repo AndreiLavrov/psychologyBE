@@ -99,6 +99,9 @@ $ npm i @nestjs/config
 $ npm install cross-env
 (set cross-env vars into package.json-scripts)
 
+# Add user.controller(with services and DTO)
+
+
 
 # install @types/sequelize
 $ npm install --save-dev @types/sequelize
