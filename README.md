@@ -101,19 +101,13 @@ $ npm install cross-env
 
 # Add user.controller(with services and DTO)
 
+# install swagger
+$ npm install --save @nestjs/swagger swagger-ui-express
 
 
-# install @types/sequelize
-$ npm install --save-dev @types/sequelize
 
-# install @types/sequelize
-$ npm install --save-dev @types/sequelize
 
-# install @types/sequelize
-$ npm install --save-dev @types/sequelize
 
-# install @types/sequelize
-$ npm install --save-dev @types/sequelize
 ```
 
 ## License
