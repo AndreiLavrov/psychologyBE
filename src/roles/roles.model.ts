@@ -1,5 +1,8 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { Column, DataType, Model, Table } from 'sequelize-typescript';
+import { BelongsToMany, Column, DataType, Model, Table } from 'sequelize-typescript';
+import { Roles } from 'src/roles/dto/create-role.dto';
+import { UserRoles } from 'src/roles/user-roles.model';
+import { User } from 'src/users/users.model';
 
 interface RoleCreationAttrs {
   value: string;
@@ -12,11 +15,14 @@ export class Role extends Model<Role, RoleCreationAttrs> {
   @Column({ type: DataType.INTEGER, unique: true, autoIncrement: true, primaryKey: true })
   id: number;
 
-  @ApiProperty({ example: 'ADMIN', description: 'Unique role' })
+  @ApiProperty({ example: Roles.ADMIN, description: 'Unique role' })
   @Column({ type: DataType.STRING, unique: true, allowNull: false })
   value: string;
 
   @ApiProperty({ example: 'Administrator', description: 'Role description' })
   @Column({ type: DataType.STRING, allowNull: false })
   description: string;
+
+  @BelongsToMany(() => User, () => UserRoles)
+  users: User[];
 }
