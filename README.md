@@ -93,7 +93,7 @@ $ nest generate controller users
 $ nest generate service users
 
 # create config
-$ npm i @nestjs/config
+$ npm install @nestjs/config
 
 # install cross-env for set some system vars while running 
 $ npm install cross-env
@@ -102,10 +102,28 @@ $ npm install cross-env
 # Add user.controller(with services and DTO)
 
 # install swagger
-$ npm install --save @nestjs/swagger swagger-ui-express
+$ npm i --save @nestjs/swagger swagger-ui-express
 
+# use nest CLI
+$ nest generate module roles
 
+# use nest CLI
+$ nest generate controller roles
 
+# use nest CLI
+$ nest generate service roles
+
+# install jwt and bcryptjs
+$ npm i @nestjs/jwt bcryptjs
+
+# use nest CLI
+$ nest generate module auth
+
+# use nest CLI
+$ nest generate controller auth
+
+# use nest CLI
+$ nest generate service auth
 
 
 ```
