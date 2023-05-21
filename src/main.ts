@@ -15,7 +15,7 @@ async function start() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('/api/docs', app, document);
-
+  // app.useGlobalGuards(JwtAuthGuard); // could be used here for the app generally;
   await app.listen(PORT, () => console.log(`server started on port =${PORT}`));
 }
 start();

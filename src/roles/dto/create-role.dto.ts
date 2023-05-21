@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export enum Roles {
+export enum RolesCollection {
   'ADMIN',
   'USER',
 }
